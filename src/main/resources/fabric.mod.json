@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "charmony-api",
+  "version": "${mod_version}",
+
+  "name": "Charmony API",
+  "description": "API for Charmony mods.",
+  "authors": [
+    "svenhjol"
+  ],
+
+  "license": "MIT",
+  "environment": "*",
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "*",
+    "java": ">=21"
+  },
+
+  "contact": {
+    "homepage": "https://charmony.work",
+    "sources": "https://github.com/svenhjol/${mod_id}"
+  }
+}
