@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Bump pack version for latest snapshot.
+
 ## 1.0.2
 
 - Add icon.
