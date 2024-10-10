@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "Charmony resources",
+    "description": "Charmony API resources",
     "pack_format": ${pack_version}
   }
 }
