@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1
+
+- Build for 1.21.2-pre2
+
+## 1.1.0
+
+- Build for 1.21.2-pre1
+
 ## 1.0.4
 
 - Add ItemTidying API.
