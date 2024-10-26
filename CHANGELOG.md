@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0
+
+- Build for 1.21.3
+
 ## 1.1.3-4
 
 - Update to loom 1.8 and Minecraft 1.21.2-pre3
