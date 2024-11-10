@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0
+
+- Add GrindableItemProvider.
+
 ## 1.4.0
 
 - Build for 1.21.3
