@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.2
+
+- Fix interface of AutoPickupItemProvider to return a function.
+
 ## 1.5.1
 
 - Add QuickReplantProvider and AutoPickupItemProvider.
