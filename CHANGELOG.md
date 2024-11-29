@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.0
+
+- Build for 1.21.4.
+
 ## 1.5.2
 
 - Fix interface of AutoPickupItemProvider to return a function.
