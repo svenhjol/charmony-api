@@ -1,8 +1,24 @@
 # Changelog
 
-## 1.4.1
+## 1.6.1
 
 - Update icon.
+
+## 1.6.0
+
+- Build for 1.21.4.
+
+## 1.5.2
+
+- Fix interface of AutoPickupItemProvider to return a function.
+
+## 1.5.1
+
+- Add QuickReplantProvider and AutoPickupItemProvider.
+
+## 1.5.0
+
+- Add GrindableItemProvider.
 
 ## 1.4.0
 
