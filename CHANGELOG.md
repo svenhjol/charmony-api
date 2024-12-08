@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1
+
+- Update icon.
+
 ## 1.4.0
 
 - Build for 1.21.3
