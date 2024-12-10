@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.2
+
+- Add TotemInventoryCheckProvider and TotemPreservingProvider.
+
 ## 1.6.1
 
 - Update icon.
