@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.3
+
+- Add WandererTradeProvider.
+
 ## 1.6.2
 
 - Add TotemInventoryCheckProvider and TotemPreservingProvider.
