@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.4
+
+- Add RunestoneDefinition and RunestoneLocation API.
+
 ## 1.6.3
 
 - Add WandererTradeProvider.
