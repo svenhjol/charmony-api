@@ -2,7 +2,7 @@
 
 ## 1.6.4
 
-- Add RunestoneDefinition and RunestoneLocation API.
+- Add Runestone and Stone Circle definitions.
 
 ## 1.6.3
 
