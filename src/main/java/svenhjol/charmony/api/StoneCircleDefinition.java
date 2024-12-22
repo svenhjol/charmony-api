@@ -44,7 +44,7 @@ public interface StoneCircleDefinition extends StringRepresentable {
         return 0.72d;
     }
 
-    default double runestoneRarity() {
+    default double runestoneQuality() {
         return 0d;
     }
 
@@ -52,7 +52,7 @@ public interface StoneCircleDefinition extends StringRepresentable {
         return new BlockPos(pos.getX(), level.getMinY() + 15, pos.getZ());
     }
 
-    default Runnable addExtraBlocks(WorldGenLevel level, BlockPos pos, double rarity) {
+    default Runnable addExtraBlocks(WorldGenLevel level, BlockPos pos) {
         return () -> {};
     }
 

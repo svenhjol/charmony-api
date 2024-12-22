@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.2
+
+- Simplify runestone rarity/quality. 1.7.2
+
 ## 1.7.1
 
 - Add runestone rarity to stone circle definition API.
