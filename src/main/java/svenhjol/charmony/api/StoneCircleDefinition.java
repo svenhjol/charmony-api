@@ -44,6 +44,10 @@ public interface StoneCircleDefinition extends StringRepresentable {
         return 0.72d;
     }
 
+    default double runestoneRarity() {
+        return 0d;
+    }
+
     default BlockPos ceilingReposition(WorldGenLevel level, BlockPos pos) {
         return new BlockPos(pos.getX(), level.getMinY() + 15, pos.getZ());
     }

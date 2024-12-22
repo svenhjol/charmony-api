@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.1
+
+- Add runestone rarity to stone circle definition API.
+
 ## 1.7.0
 
 - Change case of enums.
