@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.7.0
+
+- Change case of enums.
+- Add rarity to runestone location API.
+- Add more features to stone circle definition API.
+
 ## 1.6.4
 
 - Add Runestone and Stone Circle definitions.

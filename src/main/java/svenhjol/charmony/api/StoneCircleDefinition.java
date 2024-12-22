@@ -22,6 +22,8 @@ public interface StoneCircleDefinition extends StringRepresentable {
         return Pair.of(4, 8);
     }
 
+    default Pair<Integer, Integer> pillarThickness() { return Pair.of(1, 1); }
+
     default Pair<Integer, Integer> radius() {
         return Pair.of(6, 15);
     }
@@ -44,6 +46,10 @@ public interface StoneCircleDefinition extends StringRepresentable {
 
     default BlockPos ceilingReposition(WorldGenLevel level, BlockPos pos) {
         return new BlockPos(pos.getX(), level.getMinY() + 15, pos.getZ());
+    }
+
+    default Runnable addExtraBlocks(WorldGenLevel level, BlockPos pos, double rarity) {
+        return () -> {};
     }
 
     default int terrainHeightTolerance() {

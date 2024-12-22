@@ -26,8 +26,8 @@ public record RunestoneLocation(Type type, ResourceLocation id) {
     }
 
     public enum Type {
-        BIOME,
-        PLAYER,
-        STRUCTURE
+        Biome,
+        Player,
+        Structure
     }
 }
