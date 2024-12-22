@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.3
+
+- Update stone circle definition with decay and max runestones options.
+
 ## 1.7.2
 
 - Simplify runestone rarity/quality. 1.7.2

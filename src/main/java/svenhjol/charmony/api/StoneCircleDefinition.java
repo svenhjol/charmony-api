@@ -36,7 +36,11 @@ public interface StoneCircleDefinition extends StringRepresentable {
         return 0;
     }
 
-    default int maxRunestones() {
+    default int maxRunestonesPerPillar() {
+        return 2;
+    }
+
+    default int maxRunestonesPerCircle() {
         return 8;
     }
 
@@ -48,11 +52,15 @@ public interface StoneCircleDefinition extends StringRepresentable {
         return 0d;
     }
 
+    default double decayChance() {
+        return 0.4d;
+    }
+
     default BlockPos ceilingReposition(WorldGenLevel level, BlockPos pos) {
         return new BlockPos(pos.getX(), level.getMinY() + 15, pos.getZ());
     }
 
-    default Runnable addExtraBlocks(WorldGenLevel level, BlockPos pos) {
+    default Runnable addAtCenter(WorldGenLevel level, BlockPos pos) {
         return () -> {};
     }
 
