@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.0
+
+- Add GlintColorApi.
+- Fix invalid class path.
+
 ## 1.7.3
 
 - Update stone circle definition with decay and max runestones options.
