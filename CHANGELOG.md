@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.1
+
+- GlintColorApi singleton.
+
 ## 1.8.0
 
 - Add GlintColorApi.

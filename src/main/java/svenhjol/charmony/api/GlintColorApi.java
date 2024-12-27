@@ -9,9 +9,19 @@ import java.util.function.Function;
 
 @SuppressWarnings("unused")
 public class GlintColorApi {
+    private static GlintColorApi instance;
     private BiConsumer<ItemStack, DyeColor> apply = (i, d) -> {};
     private Function<ItemStack, Boolean> has = i -> false;
     private Consumer<ItemStack> remove = i -> {};
+
+    private GlintColorApi() {}
+
+    public static GlintColorApi instance() {
+        if (instance == null) {
+            instance = new GlintColorApi();
+        }
+        return instance;
+    }
 
     public void apply(ItemStack stack, DyeColor color) {
         apply.accept(stack, color);
