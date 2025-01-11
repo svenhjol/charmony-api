@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.2
+
+- Add RunicPower and provider.
+
 ## 1.8.1
 
 - GlintColorApi singleton.
