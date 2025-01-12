@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.3
+
+- Add a consume() method to the runic power API.
+- Add API documentation.
+
 ## 1.8.2
 
 - Add RunicPower and provider.
