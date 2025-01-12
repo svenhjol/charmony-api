@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.4
+
+- Add an isValid() method to the runic power API.
+
 ## 1.8.3
 
 - Add a consume() method to the runic power API.

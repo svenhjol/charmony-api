@@ -49,6 +49,14 @@ public interface RunicPower {
     }
 
     /**
+     * Check if this power is still valid.
+     * The power can set this to false to be automatically deactivated by the ticker.
+     */
+    default boolean isValid(Player player) {
+        return true;
+    }
+
+    /**
      * For continuous powers this is the interval at which a resource will be consumed to keep the power active.
      * For one-shot powers this is the cooldown period.
      */
