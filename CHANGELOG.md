@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.8.4
+
+- Add an isValid() method to the runic power API.
+
+## 1.8.3
+
+- Add a consume() method to the runic power API.
+- Add API documentation.
+
+## 1.8.2
+
+- Add RunicPower and provider.
+
 ## 1.8.1
 
 - GlintColorApi singleton.
