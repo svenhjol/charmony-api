@@ -20,8 +20,11 @@ public record RunestoneLocation(Type type, ResourceLocation id) {
     }
 
     public static RunestoneLocation load(CompoundTag tag) {
-        var type = Type.valueOf(tag.getString(TYPE_TAG));
-        var id = ResourceLocation.parse(tag.getString(ID_TAG));
+        var typeString = tag.getString(TYPE_TAG).orElseThrow();
+        var idString = tag.getString(ID_TAG).orElseThrow();
+
+        var type = Type.valueOf(typeString);
+        var id = ResourceLocation.parse(idString);
         return new RunestoneLocation(type, id);
     }
 
