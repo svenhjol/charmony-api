@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.11.0
+
+- Update for Minecraft 1.21.5.
+
 ## 1.8.4
 
 - Add an isValid() method to the runic power API.
