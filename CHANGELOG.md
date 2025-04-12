@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.2
+
+- Pass finalized registry access to the getRuneWords() method.
+
 ## 1.12.1
 
 - Add RuneWordProvider for mods to register custom objects as rune words.
