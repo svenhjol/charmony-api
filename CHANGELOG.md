@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.1
+
+- Add RuneWordProvider for mods to register custom objects as rune words.
+
 ## 1.11.0
 
 - Update for Minecraft 1.21.5.
