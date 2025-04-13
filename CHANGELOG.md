@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.0
+
+- Rename plurals for consistency: StoneCircleDefinitionProvider, RunestoneDefinitionProvider
+
 ## 1.12.6
 
 - Update default stone circle definitions to remove warm ocean loot table, dilute grass block replacement and make sandstone replaceable.
