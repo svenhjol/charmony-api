@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.12.3
+
+- Add new functionality to Stone Circle definitions:
+    - Chance of debris being placed around each pillar
+    - Blocks that debris can turn into
+    - Loot tables to use if the debris is a suspicious block
+
 ## 1.12.2
 
 - Pass finalized registry access to the getRuneWords() method.
