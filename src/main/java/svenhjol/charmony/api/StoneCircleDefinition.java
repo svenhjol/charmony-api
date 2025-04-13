@@ -122,7 +122,7 @@ public interface StoneCircleDefinition extends StringRepresentable {
      *
      * @return List of loot table resource keys.
      */
-    default List<ResourceKey<LootTable>> archaeologyLootTable() {
+    default List<ResourceKey<LootTable>> archaeologyLootTables() {
         return List.of(
             BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON,
             BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_RARE

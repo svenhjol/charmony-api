@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.4
+
+- Incorrect method plural name.
+
 ## 1.12.3
 
 - Add new functionality to Stone Circle definitions:
