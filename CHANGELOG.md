@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.6
+
+- Update default stone circle definitions to remove warm ocean loot table, dilute grass block replacement and make sandstone replaceable.
+
 ## 1.12.5
 
 - Update default stone circle definitions floor replacements, loot tables and debris range.
