@@ -106,7 +106,7 @@ public interface StoneCircleDefinition extends StringRepresentable {
      * @return Range of debris block placement, in blocks.
      */
     default int debrisRange() {
-        return 3;
+        return 4;
     }
 
     default BlockPos ceilingReposition(WorldGenLevel level, BlockPos pos) {
@@ -125,7 +125,10 @@ public interface StoneCircleDefinition extends StringRepresentable {
     default List<ResourceKey<LootTable>> archaeologyLootTables() {
         return List.of(
             BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON,
-            BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_RARE
+            BuiltInLootTables.DESERT_PYRAMID_ARCHAEOLOGY,
+            BuiltInLootTables.DESERT_WELL_ARCHAEOLOGY,
+            BuiltInLootTables.OCEAN_RUIN_COLD_ARCHAEOLOGY,
+            BuiltInLootTables.OCEAN_RUIN_WARM_ARCHAEOLOGY
         );
     }
 
@@ -138,12 +141,14 @@ public interface StoneCircleDefinition extends StringRepresentable {
     default Map<Block, List<Block>> floorReplacements() {
         Map<Block, List<Block>> replacements = new HashMap<>();
 
-        replacements.put(Blocks.GRASS_BLOCK, List.of(Blocks.ROOTED_DIRT, Blocks.COARSE_DIRT));
-        replacements.put(Blocks.DIRT, List.of(Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL, Blocks.COARSE_DIRT, Blocks.PODZOL));
+        replacements.put(Blocks.GRASS_BLOCK, List.of(Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL));
+        replacements.put(Blocks.DIRT, List.of(Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL, Blocks.COARSE_DIRT, Blocks.ROOTED_DIRT, Blocks.PODZOL));
         replacements.put(Blocks.SAND, List.of(Blocks.SANDSTONE, Blocks.SUSPICIOUS_SAND));
+        replacements.put(Blocks.GRAVEL, List.of(Blocks.SUSPICIOUS_GRAVEL));
         replacements.put(Blocks.STONE, List.of(Blocks.COBBLESTONE, Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL));
-        replacements.put(Blocks.NETHERRACK, List.of(Blocks.MAGMA_BLOCK, Blocks.BLACKSTONE, Blocks.SOUL_SAND));
+        replacements.put(Blocks.NETHERRACK, List.of(Blocks.MAGMA_BLOCK, Blocks.SOUL_SAND));
         replacements.put(Blocks.SOUL_SAND, List.of(Blocks.BLACKSTONE, Blocks.SOUL_SOIL));
+        replacements.put(Blocks.END_STONE, List.of(Blocks.END_STONE_BRICKS));
 
         return replacements;
     }

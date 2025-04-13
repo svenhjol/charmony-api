@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.5
+
+- Update default stone circle definitions floor replacements, loot tables and debris range.
+
 ## 1.12.4
 
 - Incorrect method plural name.
