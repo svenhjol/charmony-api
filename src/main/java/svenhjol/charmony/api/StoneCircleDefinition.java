@@ -2,21 +2,19 @@ package svenhjol.charmony.api;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BrushableBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootTable;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Supplier;
 
 @SuppressWarnings({"NullableProblems", "unused"})
@@ -101,7 +99,7 @@ public interface StoneCircleDefinition extends StringRepresentable {
 
     /**
      * How many blocks away from the pillar a debris block should be placed.
-     * This affects the X and Z coordinate placement. The Y is hald the terrain height tolerance.
+     * This affects the X and Z coordinate placement. The Y is half the terrain height tolerance.
      *
      * @return Range of debris block placement, in blocks.
      */
@@ -113,9 +111,13 @@ public interface StoneCircleDefinition extends StringRepresentable {
         return new BlockPos(pos.getX(), level.getMinY() + 15, pos.getZ());
     }
 
-    default Runnable addAtCenter(WorldGenLevel level, BlockPos pos) {
-        return () -> {};
-    }
+    /**
+     * Called when generating a stone circle to try and place something in the center.
+     *
+     * @param level Level reference.
+     * @param pos Block pos at the center of the circle.
+     */
+    default void addAtCenter(WorldGenLevel level, BlockPos pos) {}
 
     /**
      * The loot tables to use if a suspicious block is placed.
@@ -132,23 +134,34 @@ public interface StoneCircleDefinition extends StringRepresentable {
     }
 
     /**
-     * Map of floor blocks to be replaced with another block from a corresponding list.
+     * Default map of floor blocks to be replaced with another block from a corresponding list.
      * If a suspicious block is placed, a loot table from the archaeologyLootTable() method will be used.
      *
      * @return Map of floor blocks to their potential replacements.
      */
-    default Map<Block, List<Block>> floorReplacements() {
-        Map<Block, List<Block>> replacements = new HashMap<>();
+    default Map<Block, List<Pair<Block, Double>>> debrisReplacements() {
+        Map<Block, List<Pair<Block, Double>>> replacements = new HashMap<>();
 
-        replacements.put(Blocks.GRASS_BLOCK, List.of(Blocks.DIRT, Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL));
-        replacements.put(Blocks.DIRT, List.of(Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL, Blocks.COARSE_DIRT, Blocks.ROOTED_DIRT));
-        replacements.put(Blocks.SAND, List.of(Blocks.SANDSTONE, Blocks.SUSPICIOUS_SAND));
-        replacements.put(Blocks.SANDSTONE, List.of(Blocks.SUSPICIOUS_SAND));
-        replacements.put(Blocks.GRAVEL, List.of(Blocks.SUSPICIOUS_GRAVEL));
-        replacements.put(Blocks.STONE, List.of(Blocks.COBBLESTONE, Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL));
-        replacements.put(Blocks.NETHERRACK, List.of(Blocks.MAGMA_BLOCK, Blocks.SOUL_SAND));
-        replacements.put(Blocks.SOUL_SAND, List.of(Blocks.BLACKSTONE, Blocks.SOUL_SOIL));
-        replacements.put(Blocks.END_STONE, List.of(Blocks.END_STONE_BRICKS));
+        replacements.put(Blocks.GRASS_BLOCK,
+            new ArrayList<>(List.of(Pair.of(Blocks.DIRT, 0.5d), Pair.of(Blocks.GRAVEL, 0.4d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.3d))));
+        replacements.put(Blocks.DIRT,
+            new ArrayList<>(List.of(Pair.of(Blocks.GRAVEL, 0.4d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.55d), Pair.of(Blocks.COARSE_DIRT, 0.5d), Pair.of(Blocks.ROOTED_DIRT, 0.4d), Pair.of(Blocks.PODZOL, 0.1d))));
+        replacements.put(Blocks.SAND,
+            new ArrayList<>(List.of(Pair.of(Blocks.SANDSTONE, 0.5d), Pair.of(Blocks.SUSPICIOUS_SAND, 0.55d))));
+        replacements.put(Blocks.SANDSTONE,
+            new ArrayList<>(List.of(Pair.of(Blocks.SUSPICIOUS_SAND, 0.5d))));
+        replacements.put(Blocks.RED_SAND,
+            new ArrayList<>(List.of(Pair.of(Blocks.RED_SANDSTONE, 0.5d), Pair.of(Blocks.GRAVEL, 0.4d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.4d))));
+        replacements.put(Blocks.GRAVEL,
+            new ArrayList<>(List.of(Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.5d))));
+        replacements.put(Blocks.STONE,
+            new ArrayList<>(List.of(Pair.of(Blocks.COBBLESTONE, 0.5d), Pair.of(Blocks.GRAVEL, 0.5d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.5d))));
+        replacements.put(Blocks.NETHERRACK,
+            new ArrayList<>(List.of(Pair.of(Blocks.MAGMA_BLOCK, 0.5d), Pair.of(Blocks.SOUL_SAND, 0.5d))));
+        replacements.put(Blocks.SOUL_SAND,
+            new ArrayList<>(List.of(Pair.of(Blocks.BLACKSTONE, 0.5d), Pair.of(Blocks.SOUL_SOIL, 0.5d))));
+        replacements.put(Blocks.END_STONE,
+            new ArrayList<>(List.of(Pair.of(Blocks.END_STONE_BRICKS, 0.5d))));
 
         return replacements;
     }

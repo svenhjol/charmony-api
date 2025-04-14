@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.14.0
+
+- Change signatures of stone circle definition addAtCenter and debrisReplacements.
+
 ## 1.13.0
 
 - Rename plurals for consistency: StoneCircleDefinitionProvider, RunestoneDefinitionProvider
