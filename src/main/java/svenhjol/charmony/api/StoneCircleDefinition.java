@@ -134,6 +134,28 @@ public interface StoneCircleDefinition extends StringRepresentable {
     }
 
     /**
+     * The loot tables to use if a chest block is placed.
+     *
+     * @return List of loot table resource keys.
+     */
+    default List<ResourceKey<LootTable>> chestLootTables() {
+        return List.of(
+            BuiltInLootTables.SIMPLE_DUNGEON
+        );
+    }
+
+    /**
+     * The loot tables to use if a barrel block is placed.
+     *
+     * @return List of loot table resource keys.
+     */
+    default List<ResourceKey<LootTable>> barrelLootTables() {
+        return List.of(
+            BuiltInLootTables.SIMPLE_DUNGEON
+        );
+    }
+
+    /**
      * Default map of floor blocks to be replaced with another block from a corresponding list.
      * If a suspicious block is placed, a loot table from the archaeologyLootTable() method will be used.
      *
@@ -145,7 +167,7 @@ public interface StoneCircleDefinition extends StringRepresentable {
         replacements.put(Blocks.GRASS_BLOCK,
             new ArrayList<>(List.of(Pair.of(Blocks.DIRT, 0.5d), Pair.of(Blocks.GRAVEL, 0.4d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.3d))));
         replacements.put(Blocks.DIRT,
-            new ArrayList<>(List.of(Pair.of(Blocks.GRAVEL, 0.4d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.55d), Pair.of(Blocks.COARSE_DIRT, 0.5d), Pair.of(Blocks.ROOTED_DIRT, 0.4d), Pair.of(Blocks.PODZOL, 0.1d))));
+            new ArrayList<>(List.of(Pair.of(Blocks.GRAVEL, 0.4d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.55d), Pair.of(Blocks.COARSE_DIRT, 0.5d), Pair.of(Blocks.ROOTED_DIRT, 0.4d), Pair.of(Blocks.PODZOL, 0.1d), Pair.of(Blocks.CHEST, 0.1d), Pair.of(Blocks.BARREL, 0.1d))));
         replacements.put(Blocks.SAND,
             new ArrayList<>(List.of(Pair.of(Blocks.SANDSTONE, 0.5d), Pair.of(Blocks.SUSPICIOUS_SAND, 0.55d))));
         replacements.put(Blocks.SANDSTONE,

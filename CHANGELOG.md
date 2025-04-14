@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.14.1
+
+- Add chestLootTables and barrelLootTables to use when placing a chest or barrel block.
+- Chance for dirt debris to contain barrels or chests.
+
 ## 1.14.0
 
 - Change signatures of stone circle definition addAtCenter and debrisReplacements.
