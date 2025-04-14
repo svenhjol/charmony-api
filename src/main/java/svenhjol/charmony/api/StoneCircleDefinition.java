@@ -179,9 +179,9 @@ public interface StoneCircleDefinition extends StringRepresentable {
         replacements.put(Blocks.STONE,
             new ArrayList<>(List.of(Pair.of(Blocks.COBBLESTONE, 0.5d), Pair.of(Blocks.GRAVEL, 0.5d), Pair.of(Blocks.SUSPICIOUS_GRAVEL, 0.5d))));
         replacements.put(Blocks.NETHERRACK,
-            new ArrayList<>(List.of(Pair.of(Blocks.MAGMA_BLOCK, 0.5d), Pair.of(Blocks.SOUL_SAND, 0.5d))));
+            new ArrayList<>(List.of(Pair.of(Blocks.MAGMA_BLOCK, 0.5d), Pair.of(Blocks.SOUL_SAND, 0.5d), Pair.of(Blocks.NETHER_GOLD_ORE, 0.3d), Pair.of(Blocks.ANCIENT_DEBRIS, 0.1d))));
         replacements.put(Blocks.SOUL_SAND,
-            new ArrayList<>(List.of(Pair.of(Blocks.BLACKSTONE, 0.5d), Pair.of(Blocks.SOUL_SOIL, 0.5d))));
+            new ArrayList<>(List.of(Pair.of(Blocks.BLACKSTONE, 0.5d), Pair.of(Blocks.SOUL_SOIL, 0.5d), Pair.of(Blocks.ANCIENT_DEBRIS, 0.15d))));
         replacements.put(Blocks.END_STONE,
             new ArrayList<>(List.of(Pair.of(Blocks.END_STONE_BRICKS, 0.5d))));
 

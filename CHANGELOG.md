@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.14.2
+
+- Add some more nether debris replacements.
+
 ## 1.14.1
 
 - Add chestLootTables and barrelLootTables to use when placing a chest or barrel block.
