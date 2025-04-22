@@ -32,4 +32,11 @@ public interface ItemTidyingButtonTweak {
     default Pair<Integer, Integer> getPlayerXYOffset() {
         return Pair.of(0, 0);
     }
+
+    /**
+     * True if the screen should respond to recipe button toggle.
+     */
+    default boolean hasRecipeButton() {
+        return false;
+    }
 }

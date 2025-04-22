@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.15.2
+
+- Allow responding to recipe buttons.
+
 ## 1.15.1
 
 - Allow defaults in tweaks.
