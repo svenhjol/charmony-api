@@ -3,6 +3,8 @@ package svenhjol.charmony.api;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.gui.screens.Screen;
 
+import java.util.List;
+
 /**
  * Definition for a screen and its container offset.
  */
@@ -13,15 +15,21 @@ public interface ItemTidyingButtonTweak {
     /**
      * @deprecated since 1.15.0
      */
-    Pair<Integer, Integer> getXYOffset();
+    default Pair<Integer, Integer> getXYOffset() {
+        return getContainerXYOffset();
+    }
 
     /**
      * Provide hardcoded container inventory X and Y base coordinates for the given screen.
      */
-    Pair<Integer, Integer> getContainerXYOffset();
+    default Pair<Integer, Integer> getContainerXYOffset() {
+        return Pair.of(0, 0);
+    }
 
     /**
      * Provide hardcoded player inventory X and Y base coordinates for the given screen.
      */
-    Pair<Integer, Integer> getPlayerXYOffset();
+    default Pair<Integer, Integer> getPlayerXYOffset() {
+        return Pair.of(0, 0);
+    }
 }

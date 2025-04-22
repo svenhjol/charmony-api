@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.15.1
+
+- Allow defaults in tweaks.
+
 ## 1.15.0
 
 - Add container and player XY offsets to tweaks.
