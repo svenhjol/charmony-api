@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.15.0
+
+- Add container and player XY offsets to tweaks.
+
 ## 1.14.2
 
 - Add some more nether debris replacements.
