@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.17.0
+
+- Removed the deprecated getOffsetXY() method.
+
 ## 1.16.0
 
 - Rename the "dark mode" API to make it consistent.

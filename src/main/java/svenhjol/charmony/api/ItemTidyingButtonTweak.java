@@ -13,13 +13,6 @@ public interface ItemTidyingButtonTweak {
     Class<? extends Screen> getScreen();
 
     /**
-     * @deprecated since 1.15.0
-     */
-    default Pair<Integer, Integer> getXYOffset() {
-        return getContainerXYOffset();
-    }
-
-    /**
      * Provide hardcoded container inventory X and Y base coordinates for the given screen.
      */
     default Pair<Integer, Integer> getContainerXYOffset() {
