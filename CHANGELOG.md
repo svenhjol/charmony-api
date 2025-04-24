@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.15.3
+
+- Add UsesDarkMode.
+
 ## 1.15.2
 
 - Allow responding to recipe buttons.
