@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.16.0
+
+- Rename the "dark mode" API to make it consistent.
+- Expand the WandererTradeProvider.
+
 ## 1.15.3
 
 - Add UsesDarkMode.

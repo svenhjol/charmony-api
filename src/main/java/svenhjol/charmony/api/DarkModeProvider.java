@@ -9,8 +9,8 @@ import java.util.function.Predicate;
  * This helps consumers that render a button to a screen to use the appropriate graphic.
  */
 @SuppressWarnings("unused")
-public interface UsesDarkMode {
-    default Predicate<Screen> usingDarkMode() {
+public interface DarkModeProvider {
+    default Predicate<Screen> usesDarkMode() {
         return screen -> false;
     }
 }
