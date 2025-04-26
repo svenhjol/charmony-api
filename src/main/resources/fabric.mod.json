@@ -34,7 +34,8 @@
       "links": {
         "modmenu.discord": "${discord_link}"
       },
-      "update_checker": true
+      "update_checker": true,
+      "badges": ["library"]
     }
   }
 }
