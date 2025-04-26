@@ -18,7 +18,7 @@ public final class Api {
         } catch (Exception e) {
             // Don't keep spamming the logs after a certain number of failures.
             if (failures < 5) {
-                LOGGER.debug("API call failed.");
+                LOGGER.debug("API call failed: {}", failures);
                 failures++;
             }
         }

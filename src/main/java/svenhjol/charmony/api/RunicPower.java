@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 
 import java.util.LinkedList;
 
+@Deprecated(since = "1.18.0")
 @SuppressWarnings("unused")
 public interface RunicPower {
     String id();

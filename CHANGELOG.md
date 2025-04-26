@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.18.0
+
+- Move event interfaces from Charmony.
+- Output the number of failure attempts when making an API request.
+- Deprecate the RunicWords, this will be reworked in a future update.
+
 ## 1.17.0
 
 - Removed the deprecated getOffsetXY() method.
