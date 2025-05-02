@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.19.0
+
+- Change enum case. Prep for moving stone/secret chest APIs.
+
 ## 1.18.0
 
 - Move event interfaces from Charmony.

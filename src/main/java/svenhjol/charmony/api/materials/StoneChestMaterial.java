@@ -12,12 +12,12 @@ import java.util.function.IntFunction;
  */
 @SuppressWarnings({"NullableProblems", "unused"})
 public enum StoneChestMaterial implements StringRepresentable {
-    STONE(0, "stone", DyeColor.LIGHT_GRAY),
-    DEEPSLATE(1, "deepslate", DyeColor.GRAY),
-    PRISMARINE(2, "prismarine", DyeColor.CYAN),
-    BLACKSTONE(3, "blackstone", DyeColor.BLACK),
-    NETHER_BRICK(4, "nether_brick", DyeColor.BROWN),
-    PURPUR(5, "purpur", DyeColor.PINK);
+    Stone(0, "stone", DyeColor.LIGHT_GRAY),
+    Deepslate(1, "deepslate", DyeColor.GRAY),
+    Prismarine(2, "prismarine", DyeColor.CYAN),
+    Blackstone(3, "blackstone", DyeColor.BLACK),
+    NetherBrick(4, "nether_brick", DyeColor.BROWN),
+    Purpur(5, "purpur", DyeColor.PINK);
 
     public static final EnumCodec<StoneChestMaterial> CODEC = StringRepresentable.fromEnum(StoneChestMaterial::values);
     public static final IntFunction<StoneChestMaterial> BY_ID = ByIdMap.continuous(StoneChestMaterial::getId, values(), ByIdMap.OutOfBoundsStrategy.ZERO);
