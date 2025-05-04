@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.19.1
+
+- Added calcite as a stone chest material.
+
 ## 1.19.0
 
 - Change enum case. Prep for moving stone/secret chest APIs.
