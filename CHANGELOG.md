@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.19.2
+
+- Added tuff as a stone chest material.
+
 ## 1.19.1
 
 - Added calcite as a stone chest material.

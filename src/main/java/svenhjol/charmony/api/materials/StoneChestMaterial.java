@@ -18,7 +18,8 @@ public enum StoneChestMaterial implements StringRepresentable {
     Blackstone(3, "blackstone", DyeColor.BLACK),
     NetherBrick(4, "nether_brick", DyeColor.BROWN),
     Purpur(5, "purpur", DyeColor.PURPLE),
-    Calcite(6, "calcite", DyeColor.WHITE);
+    Calcite(6, "calcite", DyeColor.WHITE),
+    Tuff(7, "tuff", DyeColor.BLACK);
 
     public static final EnumCodec<StoneChestMaterial> CODEC = StringRepresentable.fromEnum(StoneChestMaterial::values);
     public static final IntFunction<StoneChestMaterial> BY_ID = ByIdMap.continuous(StoneChestMaterial::getId, values(), ByIdMap.OutOfBoundsStrategy.ZERO);
