@@ -1,4 +1,4 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.glint_colors;
 
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
@@ -8,17 +8,17 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 @SuppressWarnings("unused")
-public class GlintColorApi {
-    private static GlintColorApi instance;
+public final class GlintColorsApi {
+    private static GlintColorsApi instance;
     private BiConsumer<ItemStack, DyeColor> apply = (i, d) -> {};
     private Function<ItemStack, Boolean> has = i -> false;
     private Consumer<ItemStack> remove = i -> {};
 
-    private GlintColorApi() {}
+    private GlintColorsApi() {}
 
-    public static GlintColorApi instance() {
+    public static GlintColorsApi instance() {
         if (instance == null) {
-            instance = new GlintColorApi();
+            instance = new GlintColorsApi();
         }
         return instance;
     }
