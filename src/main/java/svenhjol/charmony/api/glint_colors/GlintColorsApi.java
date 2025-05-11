@@ -3,6 +3,7 @@ package svenhjol.charmony.api.glint_colors;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -10,11 +11,18 @@ import java.util.function.Function;
 @SuppressWarnings("unused")
 public final class GlintColorsApi {
     private static GlintColorsApi instance;
-    private BiConsumer<ItemStack, DyeColor> apply = (i, d) -> {};
-    private Function<ItemStack, Boolean> has = i -> false;
-    private Consumer<ItemStack> remove = i -> {};
 
-    private GlintColorsApi() {}
+    private BiConsumer<ItemStack, DyeColor> applyImpl;
+    private Function<ItemStack, Boolean> hasImpl;
+    private Consumer<ItemStack> removeImpl;
+    private Function<ItemStack, Optional<DyeColor>> getColorImpl;
+
+    private GlintColorsApi() {
+        applyImpl = (stack, color) -> {};
+        hasImpl = stack -> false;
+        removeImpl = stack -> {};
+        getColorImpl = stack -> Optional.empty();
+    }
 
     public static GlintColorsApi instance() {
         if (instance == null) {
@@ -24,26 +32,34 @@ public final class GlintColorsApi {
     }
 
     public void apply(ItemStack stack, DyeColor color) {
-        apply.accept(stack, color);
+        applyImpl.accept(stack, color);
     }
 
     public boolean has(ItemStack stack) {
-        return has.apply(stack);
+        return hasImpl.apply(stack);
     }
 
     public void remove(ItemStack stack) {
-        remove.accept(stack);
+        removeImpl.accept(stack);
     }
 
-    public void setApply(BiConsumer<ItemStack, DyeColor> apply) {
-        this.apply = apply;
+    public Optional<DyeColor> getColor(ItemStack stack) {
+        return getColorImpl.apply(stack);
     }
 
-    public void setHas(Function<ItemStack, Boolean> has) {
-        this.has = has;
+    public void setApplyImpl(BiConsumer<ItemStack, DyeColor> impl) {
+        this.applyImpl = impl;
     }
 
-    public void setRemove(Consumer<ItemStack> remove) {
-        this.remove = remove;
+    public void setGetColorImpl(Function<ItemStack, Optional<DyeColor>> impl) {
+        this.getColorImpl = impl;
+    }
+
+    public void setHasImpl(Function<ItemStack, Boolean> impl) {
+        this.hasImpl = impl;
+    }
+
+    public void setRemoveImpl(Consumer<ItemStack> impl) {
+        this.removeImpl = impl;
     }
 }

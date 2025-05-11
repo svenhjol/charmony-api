@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.20.1
+
+- Update Glint Colors API.
+
 ## 1.20.0
 
 - Move interfaces, enums and helper classes into their own packages.
