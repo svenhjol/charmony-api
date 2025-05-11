@@ -1,4 +1,4 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.runestones;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

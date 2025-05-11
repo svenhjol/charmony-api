@@ -1,4 +1,4 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.tweaks;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.world.level.ItemLike;

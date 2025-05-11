@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.20.0
+
+- Move interfaces, enums and helper classes into their own packages.
+
 ## 1.19.2
 
 - Added tuff as a stone chest material.

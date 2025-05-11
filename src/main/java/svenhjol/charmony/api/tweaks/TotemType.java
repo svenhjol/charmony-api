@@ -1,4 +1,4 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.tweaks;
 
 @SuppressWarnings("unused")
 public enum TotemType {

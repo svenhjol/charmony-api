@@ -1,4 +1,4 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.tweaks;
 
 import net.minecraft.client.gui.screens.Screen;
 

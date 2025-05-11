@@ -1,9 +1,7 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.tweaks;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.gui.screens.Screen;
-
-import java.util.List;
 
 /**
  * Definition for a screen and its container offset.

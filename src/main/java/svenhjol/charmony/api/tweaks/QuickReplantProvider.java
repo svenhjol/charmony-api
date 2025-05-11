@@ -1,4 +1,4 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.tweaks;
 
 import net.minecraft.world.level.block.state.BlockState;
 

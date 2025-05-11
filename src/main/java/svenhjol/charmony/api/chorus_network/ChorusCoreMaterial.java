@@ -1,4 +1,4 @@
-package svenhjol.charmony.api.materials;
+package svenhjol.charmony.api.chorus_network;
 
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.StringRepresentable;

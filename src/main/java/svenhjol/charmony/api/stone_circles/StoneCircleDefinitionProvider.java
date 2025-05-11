@@ -1,4 +1,4 @@
-package svenhjol.charmony.api;
+package svenhjol.charmony.api.stone_circles;
 
 import java.util.List;
 

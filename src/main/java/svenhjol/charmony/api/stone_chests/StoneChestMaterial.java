@@ -1,4 +1,4 @@
-package svenhjol.charmony.api.materials;
+package svenhjol.charmony.api.stone_chests;
 
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.StringRepresentable;
