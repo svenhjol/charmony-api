@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.21.0
+
+- Update runestones API to use a runestone type reference.
+
 ## 1.20.1
 
 - Update Glint Colors API.

@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 @SuppressWarnings("unused")
 public interface RunestoneDefinition {
-    Supplier<? extends Block> runestoneBlock();
+    RunestoneType type();
 
     Supplier<? extends Block> baseBlock();
 
