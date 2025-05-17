@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.22.0
+
+- Merge from separate mods.
+
 ## 1.21.0
 
 - Update runestones API to use a runestone type reference.
