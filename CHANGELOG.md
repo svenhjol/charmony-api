@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.0
+
+- Merge from core.
+
 ## 1.22.0
 
 - Merge from separate mods.
