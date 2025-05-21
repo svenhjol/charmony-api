@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.3
+
+- Restore tinted changes.
+
 ## 1.23.2
 
 - Rename "TintedGuiGraphics" to "Tinted" as it no longer targets the original class.
