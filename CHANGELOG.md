@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.2
+
+- Rename "TintedGuiGraphics" to "Tinted" as it no longer targets the original class.
+
 ## 1.23.0
 
 - Merge from core.

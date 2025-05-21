@@ -4,6 +4,6 @@ import net.minecraft.client.gui.render.state.BlitRenderState;
 import svenhjol.charmony.api.core.Color;
 
 @SuppressWarnings("unused")
-public interface TintedGuiGraphics {
+public interface Tinted {
     BlitRenderState tint(Color color);
 }
