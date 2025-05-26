@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.4
+
+- Add custom HudDisplayCallback.
+
 ## 1.23.3
 
 - Restore tinted changes.
