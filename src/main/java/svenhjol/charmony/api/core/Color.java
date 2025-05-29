@@ -2,6 +2,7 @@ package svenhjol.charmony.api.core;
 
 import net.minecraft.util.ARGB;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.phys.Vec3;
 
 @SuppressWarnings("unused")
 public final class Color {
@@ -16,22 +17,26 @@ public final class Color {
     }
 
     public float getRed() {
-        return (float) ARGB.red(this.color) / 255.0f;
+        return (float) ARGB.red(color) / 255.0f;
     }
 
     public float getGreen() {
-        return (float) ARGB.green(this.color) / 255.0f;
+        return (float) ARGB.green(color) / 255.0f;
     }
 
     public float getBlue() {
-        return (float) ARGB.blue(this.color) / 255.0f;
+        return (float) ARGB.blue(color) / 255.0f;
     }
 
     public float getAlpha() {
-        return (float) ARGB.alpha(this.color) / 255.0f;
+        return (float) ARGB.alpha(color) / 255.0f;
     }
 
-    public int getColor() {
+    public int getIntColor() {
         return color;
+    }
+
+    public int getArgbColor() {
+        return ARGB.color(Vec3.fromRGB24(color));
     }
 }

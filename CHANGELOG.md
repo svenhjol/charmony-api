@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.24.0
+
+- `getColor()` is now `getIntColor()`.
+- Add `getArgbColor()`.
+
 ## 1.23.5
 
 - Move TintedGuiGraphics back into core.
