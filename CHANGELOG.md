@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.5
+
+- Move TintedGuiGraphics back into core.
+
 ## 1.23.4
 
 - Add custom HudDisplayCallback.
