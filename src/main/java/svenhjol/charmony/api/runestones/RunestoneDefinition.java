@@ -17,5 +17,5 @@ public interface RunestoneDefinition {
 
     Optional<RunestoneLocation> location(LevelAccessor level, BlockPos pos, RandomSource random, double quality);
 
-    Supplier<ItemLike> sacrifice(LevelAccessor level, BlockPos pos, RandomSource random, double quality);
+    Supplier<ItemLike> item(LevelAccessor level, BlockPos pos, RandomSource random, double quality);
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.24.1
+
+- Rename "sacrifice" to "item".
+
 ## 1.24.0
 
 - `getColor()` is now `getIntColor()`.
