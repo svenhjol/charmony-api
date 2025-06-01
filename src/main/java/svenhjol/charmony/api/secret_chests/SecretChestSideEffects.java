@@ -2,6 +2,7 @@ package svenhjol.charmony.api.secret_chests;
 
 import net.minecraft.util.StringRepresentable;
 
+@SuppressWarnings("unused")
 public enum SecretChestSideEffects implements StringRepresentable {
     Nothing("nothing"),
     SpawnOverworldMonsters("spawn_overworld_monsters"),

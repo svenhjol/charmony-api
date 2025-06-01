@@ -7,6 +7,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 
 import javax.annotation.Nullable;
 
+@SuppressWarnings("unused")
 public class SecretChestsApi {
     private static SecretChestsApi instance;
     private ChestCreator creator;

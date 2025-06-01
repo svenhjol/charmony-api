@@ -9,11 +9,9 @@
   "authors": [
     "svenhjol"
   ],
-  "icon": "assets/charmony-api/textures/gui/sprites/icon.png",
+  "icon": "assets/charmony/textures/gui/sprites/charmony-api.png",
   "license": "MIT",
   "environment": "*",
-  
-  
 
   "mixins": [],
 

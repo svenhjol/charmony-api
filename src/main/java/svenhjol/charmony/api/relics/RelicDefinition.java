@@ -12,10 +12,12 @@ import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public interface RelicDefinition extends StringRepresentable {
     /**
      * Unique id for indexing and lookups.
@@ -64,7 +66,8 @@ public interface RelicDefinition extends StringRepresentable {
     }
 
     default DyeColor glintColor(RandomSource random) {
-        var colors = List.of(DyeColor.values());
+        var colors = new ArrayList<>(List.of(DyeColor.values()));
+        colors.remove(DyeColor.PURPLE);
         return colors.get(random.nextInt(colors.size()));
     }
 

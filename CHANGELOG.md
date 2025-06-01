@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.24.2
+
+- Default relic glint colors now choose from any color other than purple.
+- Suppress some warnings about unused methods.
+- Fix icon location.
+
 ## 1.24.1
 
 - Rename "sacrifice" to "item".
