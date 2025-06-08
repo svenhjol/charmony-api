@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.25.0
+
+- Add Elixirs API.
+
 ## 1.24.2
 
 - Default relic glint colors now choose from any color other than purple.
