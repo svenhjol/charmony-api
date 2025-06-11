@@ -1,5 +1,7 @@
 package svenhjol.charmony.api.stone_chests;
 
+import com.jcraft.jorbis.Block;
+
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -7,7 +9,7 @@ import java.util.function.Function;
 public final class StoneChestsApi {
     private static StoneChestsApi instance;
 
-    private Function<StoneChestMaterial, Optional<StoneChestBlock>> getBlockImpl;
+    private Function<StoneChestMaterial, Optional<Block>> getBlockImpl;
 
     public static StoneChestsApi instance() {
         if (instance == null) {
@@ -20,12 +22,12 @@ public final class StoneChestsApi {
         getBlockImpl = material -> Optional.empty();
     }
 
-    public Optional<StoneChestBlock> getBlock(StoneChestMaterial material) {
+    public Optional<Block> getBlock(StoneChestMaterial material) {
         return getBlockImpl.apply(material);
     }
 
     public static class Impl {
-        public static void getBlock(Function<StoneChestMaterial, Optional<StoneChestBlock>> impl) {
+        public static void getBlock(Function<StoneChestMaterial, Optional<Block>> impl) {
             instance().getBlockImpl = impl;
         }
     }

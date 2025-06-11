@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.11
+
+- Weaken requirement for StoneChests API block.
+
 ## 1.26.10
 
 - Update Elixirs API.
