@@ -11,8 +11,6 @@ import javax.annotation.Nullable;
 public interface StoneChestBlockEntity {
     void setLootTable(@Nullable ResourceKey<LootTable> lootTable);
 
-    void setLootTable(ResourceKey<LootTable> lootTable, long random);
-
     void setChanged();
 
     void lock(String puzzleMenuId);
