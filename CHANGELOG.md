@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.7
+
+- Add ChestPuzzles API.
+
 ## 1.26.6
 
 - Update StoneChestBlockEntity methods.
