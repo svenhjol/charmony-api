@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.26.12
+## 1.26.13
 
-- Weaken requirement for StoneChests API block.
+- Weaken requirement for StoneChests API block and block entity.
 
 ## 1.26.10
 
