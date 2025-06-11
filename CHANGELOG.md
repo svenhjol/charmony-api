@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.26.5
+## 1.26.6
 
 - Update StoneChestBlockEntity methods.
 

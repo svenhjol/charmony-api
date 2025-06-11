@@ -7,6 +7,8 @@ import svenhjol.charmony.api.secret_chests.SecretChestSideEffects;
 
 @SuppressWarnings("unused")
 public interface StoneChestBlockEntity {
+    void setLootTable(ResourceKey<LootTable> lootTable);
+
     void setLootTable(ResourceKey<LootTable> lootTable, long random);
 
     void setChanged();
