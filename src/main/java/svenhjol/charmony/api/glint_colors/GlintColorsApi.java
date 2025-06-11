@@ -47,19 +47,21 @@ public final class GlintColorsApi {
         return getColorImpl.apply(stack);
     }
 
-    public void setApplyImpl(BiConsumer<ItemStack, DyeColor> impl) {
-        this.applyImpl = impl;
-    }
+    public static class Impl {
+        public static void apply(BiConsumer<ItemStack, DyeColor> impl) {
+            GlintColorsApi.instance().applyImpl = impl;
+        }
 
-    public void setGetColorImpl(Function<ItemStack, Optional<DyeColor>> impl) {
-        this.getColorImpl = impl;
-    }
+        public static void getColor(Function<ItemStack, Optional<DyeColor>> impl) {
+            GlintColorsApi.instance().getColorImpl = impl;
+        }
 
-    public void setHasImpl(Function<ItemStack, Boolean> impl) {
-        this.hasImpl = impl;
-    }
+        public static void has(Function<ItemStack, Boolean> impl) {
+            GlintColorsApi.instance().hasImpl = impl;
+        }
 
-    public void setRemoveImpl(Consumer<ItemStack> impl) {
-        this.removeImpl = impl;
+        public static void remove(Consumer<ItemStack> impl) {
+            GlintColorsApi.instance().removeImpl = impl;
+        }
     }
 }

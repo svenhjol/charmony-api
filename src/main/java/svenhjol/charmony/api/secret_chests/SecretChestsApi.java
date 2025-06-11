@@ -8,9 +8,10 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import javax.annotation.Nullable;
 
 @SuppressWarnings("unused")
-public class SecretChestsApi {
+public final class SecretChestsApi {
     private static SecretChestsApi instance;
-    private ChestCreator creator;
+
+    private ChestCreator creatorImpl;
 
     public static SecretChestsApi instance() {
         if (instance == null) {
@@ -20,7 +21,7 @@ public class SecretChestsApi {
     }
 
     private SecretChestsApi() {
-        this.creator = (definition, level, random, pos, waterlogged, facing) -> false;
+        this.creatorImpl = (definition, level, random, pos, waterlogged, facing) -> false;
     }
 
     public boolean createChest(
@@ -31,11 +32,7 @@ public class SecretChestsApi {
         boolean waterlogged,
         @Nullable Direction facing
     ) {
-        return creator.create(definition, level, random, pos, waterlogged, facing);
-    }
-
-    public void setChestCreator(ChestCreator creator) {
-        this.creator = creator;
+        return creatorImpl.create(definition, level, random, pos, waterlogged, facing);
     }
 
     @FunctionalInterface
@@ -48,5 +45,11 @@ public class SecretChestsApi {
             boolean waterlogged,
             @Nullable Direction facing
         );
+    }
+
+    public static class Impl {
+        public static void chestCreator(ChestCreator creator) {
+            SecretChestsApi.instance().creatorImpl = creator;
+        }
     }
 }

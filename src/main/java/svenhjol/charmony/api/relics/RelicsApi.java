@@ -41,15 +41,17 @@ public final class RelicsApi {
         return randomRelicOfTypeImpl.apply(registry, random, type);
     }
 
-    public void setRelicImpl(TriFunction<String, HolderGetter.Provider, RandomSource, ItemStack> impl) {
-        this.relicImpl = impl;
-    }
+    public static class Impl {
+        public static void relic(TriFunction<String, HolderGetter.Provider, RandomSource, ItemStack> impl) {
+            RelicsApi.instance().relicImpl = impl;
+        }
 
-    public void setRandomRelicImpl(BiFunction<HolderGetter.Provider, RandomSource, ItemStack> impl) {
-        this.randomRelicImpl = impl;
-    }
+        public static void randomRelic(BiFunction<HolderGetter.Provider, RandomSource, ItemStack> impl) {
+            RelicsApi.instance().randomRelicImpl = impl;
+        }
 
-    public void setRandomRelicOfTypeImpl(TriFunction<HolderGetter.Provider, RandomSource, RelicType, ItemStack> impl) {
-        this.randomRelicOfTypeImpl = impl;
+        public static void randomRelicOfType(TriFunction<HolderGetter.Provider, RandomSource, RelicType, ItemStack> impl) {
+            RelicsApi.instance().randomRelicOfTypeImpl = impl;
+        }
     }
 }

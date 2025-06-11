@@ -29,11 +29,13 @@ public final class ElixirsApi {
         return randomElixirImpl.apply(registry, random);
     }
 
-    public void setElixirImpl(TriFunction<String, HolderGetter.Provider, RandomSource, ItemStack> impl) {
-        this.elixirImpl = impl;
-    }
+    public static class Impl {
+        public static void setElixirImpl(TriFunction<String, HolderGetter.Provider, RandomSource, ItemStack> impl) {
+            ElixirsApi.instance().elixirImpl = impl;
+        }
 
-    public void setRandomElixirImpl(BiFunction<HolderGetter.Provider, RandomSource, ItemStack> impl) {
-        this.randomElixirImpl = impl;
+        public static void setRandomElixirImpl(BiFunction<HolderGetter.Provider, RandomSource, ItemStack> impl) {
+            ElixirsApi.instance().randomElixirImpl = impl;
+        }
     }
 }
