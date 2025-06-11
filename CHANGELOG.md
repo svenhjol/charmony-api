@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.5
+
+- Update StoneChestBlockEntity methods.
+
 ## 1.26.4
 
 - Update other APIs to use new way of defining implementation methods.
