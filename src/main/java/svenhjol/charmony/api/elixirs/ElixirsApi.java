@@ -30,11 +30,11 @@ public final class ElixirsApi {
     }
 
     public static class Impl {
-        public static void setElixirImpl(TriFunction<String, HolderGetter.Provider, RandomSource, ItemStack> impl) {
+        public static void elixir(TriFunction<String, HolderGetter.Provider, RandomSource, ItemStack> impl) {
             ElixirsApi.instance().elixirImpl = impl;
         }
 
-        public static void setRandomElixirImpl(BiFunction<HolderGetter.Provider, RandomSource, ItemStack> impl) {
+        public static void randomElixir(BiFunction<HolderGetter.Provider, RandomSource, ItemStack> impl) {
             ElixirsApi.instance().randomElixirImpl = impl;
         }
     }

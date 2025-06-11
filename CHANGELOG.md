@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.10
+
+- Update Elixirs API.
+
 ## 1.26.9
 
 - Make override nullable.
