@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.26.2
+## 1.26.3
 
 - Add StoneChests API.
 
