@@ -24,9 +24,9 @@ public final class StoneChestsApi {
         return getBlockImpl.apply(material);
     }
 
-    public class Impl {
+    public static class Impl {
         public void _getBlock(Function<StoneChestMaterial, Optional<StoneChestBlock>> impl) {
-            StoneChestsApi.this.getBlockImpl = impl;
+            instance().getBlockImpl = impl;
         }
     }
 }
