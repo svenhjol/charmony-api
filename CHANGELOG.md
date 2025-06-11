@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.8
+
+- Make override nullable.
+
 ## 1.26.7
 
 - Add ChestPuzzles API.

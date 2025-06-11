@@ -5,9 +5,11 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.storage.loot.LootTable;
 import svenhjol.charmony.api.secret_chests.SecretChestSideEffects;
 
+import javax.annotation.Nullable;
+
 @SuppressWarnings("unused")
 public interface StoneChestBlockEntity {
-    void setLootTable(ResourceKey<LootTable> lootTable);
+    void setLootTable(@Nullable ResourceKey<LootTable> lootTable);
 
     void setLootTable(ResourceKey<LootTable> lootTable, long random);
 
