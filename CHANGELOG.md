@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.0
+
+- Add StoneChests API.
+
 ## 1.25.0
 
 - Add Elixirs API.
