@@ -1,6 +1,6 @@
 package svenhjol.charmony.api.stone_chests;
 
-import com.jcraft.jorbis.Block;
+import net.minecraft.world.level.block.Block;
 
 import java.util.Optional;
 import java.util.function.Function;
