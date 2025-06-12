@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.14
+
+- Change schema for Stone Chest block entity.
+
 ## 1.26.13
 
 - Weaken requirement for StoneChests API block and block entity.
