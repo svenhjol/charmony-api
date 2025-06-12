@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.26.14
+## 1.26.15
 
 - Change schema for Stone Chest block entity.
 

@@ -11,4 +11,6 @@ public interface StoneChestBlockEntity {
     void setCustomDefinition(String customDefinition);
 
     String getCustomDefinition();
+
+    StoneChestMaterial getMaterial();
 }
