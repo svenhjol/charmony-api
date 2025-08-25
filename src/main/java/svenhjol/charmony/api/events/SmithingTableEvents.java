@@ -64,7 +64,7 @@ public final class SmithingTableEvents {
 
     static void putSidedInstance(Player player, SmithingTableInstance instance) {
         var uuid = player.getUUID();
-        if (player.level().isClientSide) {
+        if (player.level().isClientSide()) {
             CLIENT_INSTANCES.put(uuid, instance);
         } else {
             SERVER_INSTANCES.put(uuid, instance);
@@ -75,7 +75,7 @@ public final class SmithingTableEvents {
     static SmithingTableInstance getSidedInstance(Player player) {
         var uuid = player.getUUID();
 
-        if (player.level().isClientSide && CLIENT_INSTANCES.containsKey(uuid)) {
+        if (player.level().isClientSide() && CLIENT_INSTANCES.containsKey(uuid)) {
             return CLIENT_INSTANCES.get(uuid);
         } else if (SERVER_INSTANCES.containsKey(uuid)) {
             return SERVER_INSTANCES.get(uuid);
@@ -86,7 +86,7 @@ public final class SmithingTableEvents {
 
     static void removeSidedInstance(Player player) {
         var uuid = player.getUUID();
-        if (player.level().isClientSide) {
+        if (player.level().isClientSide()) {
             CLIENT_INSTANCES.remove(uuid);
         } else {
             SERVER_INSTANCES.remove(uuid);
